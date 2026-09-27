@@ -1,0 +1,37 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "Build Multi-File Auto-Shutdown",
+            "command": "C:\\msys2\\ucrt64\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${fileDirname}\\main.cpp",
+                "${fileDirname}\\main_frame.cpp",
+                "-o",
+                "${fileDirname}\\AutoShutdownSystem.exe",
+                "-mwindows",
+                "-I/C:/msys2/ucrt64/include/wx-3.2",
+                "-I/C:/msys2/ucrt64/lib/wx/include/msw-unicode-3.2",
+                "-lwx_mswu_core-3.2",
+                "-lwx_baseu-3.2"
+            ],
+            "options": {
+                "cwd": "C:\\msys2\\ucrt64\\bin",
+                "env": {
+                    "PATH": "C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\msys2\\ucrt64\\bin"
+                }
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Compiler task configured with explicit system paths for wxWidgets in VS Code."
+        }
+    ]
+}
